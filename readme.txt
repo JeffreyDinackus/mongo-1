@@ -11,7 +11,7 @@ exit
 cls
 
 show all current databases
-showdbs
+show dbs
 
 to select current db or create a new one. 
 use <dbname>
@@ -85,3 +85,38 @@ this is called method chaining
 
 
 from 22:35
+
+
+db.students.find().sort({gpa:-1}).limit(1)
+
+find highest gpa
+
+
+db.students.find().sort({gpa:1}).limit(1)
+
+find lowest gpa
+
+
+
+db.students.find().sort({gpa:-1}).limit(3)
+find top 3 gpa
+
+
+db.students.find().limit(2)
+find 2 first documents 
+
+
+
+find command
+
+
+similar to where clause in SQL
+db.students.find({name:"Spongebob"})
+
+db.students.find({fulltime:false})
+
+
+db.students.find({fulltime:false, gpa:4.0})
+
+
+26.49
