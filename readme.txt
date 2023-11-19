@@ -120,3 +120,14 @@ db.students.find({fulltime:false, gpa:4.0})
 
 
 26.49
+
+
+
+db.students.find({}, {name:1})
+show all student but only name field. Called a projection parameter. 
+
+
+
+db.students.updateOne({name:"Spongebob"}, {$set:{fulltime:true}})
+
+db.students.updateOne({name:"Spongebob"}, {$unset:{fulltime:""}})
