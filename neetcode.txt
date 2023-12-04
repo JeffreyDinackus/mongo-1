@@ -1,4 +1,4 @@
-12:26
+16:19
 https://www.youtube.com/watch?v=QPFlGswpyJY
 
 show dbs
@@ -14,3 +14,14 @@ db.createCollection("people")
 db.people.drop()
 
 
+
+
+db.memers.find({name:"navi})
+
+db.listingsAndReviews.find({property_type:"apartment"}).limit(1)
+
+
+
+db.listingsAndReviews.find({}, {property_type: true, name: true}).limit(10).sort({name:1})
+
+ctrl + insert to copy from compass shell 
