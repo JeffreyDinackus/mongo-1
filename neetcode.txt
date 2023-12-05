@@ -25,3 +25,35 @@ db.listingsAndReviews.find({property_type:"apartment"}).limit(1)
 db.listingsAndReviews.find({}, {property_type: true, name: true}).limit(10).sort({name:1})
 
 ctrl + insert to copy from compass shell 
+
+
+db.listingsAndReviews.find({}, {property_type: true, name: true}).limit(10).sort({name:1})
+
+
+db.listingsAndReviews.find({}, {property_type: true, name: true}).limit(10).sort({name:-1})
+
+
+db.listingsAndReviews.find({}, {property_type: true, name: true}).limit(10).sort({name:-1}).skip(1)
+
+
+db.listingsAndReviews.find({beds:5, "address.country": "Portugal"})
+
+in compass
+{beds:6, "address.country":"Portugal"}
+
+
+.find({},{})
+
+.count()
+
+.skip()
+
+.sort({name:-1})
+
+.insertOne({})
+.insertMany({})
+
+db.memers.insertOne({name: "cheese"})
+
+
+db.memers.insertMany([{name:"Gentoo"}, {name:"Arch"}])
