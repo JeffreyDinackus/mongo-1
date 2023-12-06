@@ -57,3 +57,7 @@ db.memers.insertOne({name: "cheese"})
 
 
 db.memers.insertMany([{name:"Gentoo"}, {name:"Arch"}])
+
+
+db.listingsAndReviews.find({},{"address.country": "Portugal"})
+db.memers.find({name: {$in : ["ali","Arch","Bob"]}})
